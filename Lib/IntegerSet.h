@@ -27,7 +27,7 @@ public:
 
     bool isEqualTo(IntegerSet segundoVetor);
 
-public:
+private:
     vector <int> vetor;
 };
 

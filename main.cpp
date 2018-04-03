@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
     vector<int> vetorTemp;
-    int temp, tamanho;
+    int temp;
 
     cout << "|--------------------------------------------------------------------------|" << endl;
     cout << "|                     BEM VINDO AO VECTOR ANALIST 3000                     |" << endl;

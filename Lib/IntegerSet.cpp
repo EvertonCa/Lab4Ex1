@@ -6,7 +6,7 @@
 
 IntegerSet::IntegerSet():vetor(100){};
 
-IntegerSet::IntegerSet(vector<int> vetorDeInteiros, unsigned long tamanho)
+IntegerSet::IntegerSet(vector<int> vetorDeInteiros, unsigned long tamanho):
 {
     for (int i = 0; i < 100; ++i)
     {
