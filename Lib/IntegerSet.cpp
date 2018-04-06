@@ -4,13 +4,16 @@
 
 #include "IntegerSet.h"
 
-IntegerSet::IntegerSet():vetor(100){};
+IntegerSet::IntegerSet()
+{
+    vetor.resize(100);
+};
 
-IntegerSet::IntegerSet(vector<int> vetorDeInteiros, unsigned long tamanho):
+IntegerSet::IntegerSet(vector<int> vetorDeInteiros, unsigned long tamanho)
 {
     for (int i = 0; i < 100; ++i)
     {
-        vetor[i] = 0;
+        vetor.push_back(0);
     }
 
     for (int i = 0; i < tamanho; ++i)
