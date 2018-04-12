@@ -1,6 +1,9 @@
-//
-// Created by Everton Cardoso on 28/03/2018.
-//
+/*
+Aluno: Everton Cardoso Acchetta
+RA: 22.117.061-6
+Disciplina: CC3642 - Orientação a Objetos
+Programa criado para receber dois conjuntos de numeros inteiros entre 0 e 100 e manipula-los
+ */
 
 #ifndef LAB4EX1_INTEGERSET_H
 #define LAB4EX1_INTEGERSET_H
@@ -14,18 +17,18 @@ using namespace std;
 class IntegerSet
 {
 public:
-    IntegerSet();
-    IntegerSet(vector<int> vetorDeInteiros, unsigned long tamanho);
+    IntegerSet(); //construtor padrão
+    IntegerSet(vector<int> vetorDeInteiros, unsigned long tamanho); //construtor que recebe um vetor de inteiros e os usa para o objeto criado
 
-    IntegerSet unionOfSets(IntegerSet segundoVetor);
-    IntegerSet intersectionOfSets(IntegerSet segundoVetor);
+    IntegerSet unionOfSets(IntegerSet segundoVetor); //função que retorna a união dos dois conjuntos
+    IntegerSet intersectionOfSets(IntegerSet segundoVetor); //função que retorna a intersecção dos dois conjuntos
 
-    void insertElement(int k);
-    void deleteElement(int k);
+    void insertElement(int k); //insere um elemento no conjunto
+    void deleteElement(int k); //deleta um elemento do conjunto
 
-    void printSet();
+    void printSet(); //imprime o conjunto
 
-    bool isEqualTo(IntegerSet segundoVetor);
+    bool isEqualTo(IntegerSet segundoVetor); //retorna verdadeiro caso os dois conjuntos sejam iguais
 
 private:
     vector <int> vetor;
