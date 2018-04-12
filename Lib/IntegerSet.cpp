@@ -6,12 +6,12 @@
 
 IntegerSet::IntegerSet()
 {
-    vetor.resize(100);
+    vetor.resize(101);
 };
 
 IntegerSet::IntegerSet(vector<int> vetorDeInteiros, unsigned long tamanho)
 {
-    for (int i = 0; i < 100; ++i)
+    for (int i = 0; i <= 100; ++i)
     {
         vetor.push_back(0);
     }
@@ -26,7 +26,7 @@ IntegerSet IntegerSet::unionOfSets(IntegerSet segundoVetor)
 {
     IntegerSet terceiroVetor;
 
-    for (int i = 0; i < 100; ++i)
+    for (int i = 0; i <= 100; ++i)
     {
         if(vetor[i] == 1 || segundoVetor.vetor[i] == 1)
             terceiroVetor.vetor[i] = 1;
@@ -39,7 +39,7 @@ IntegerSet IntegerSet::intersectionOfSets(IntegerSet segundoVetor)
 {
     IntegerSet terceiroVetor;
 
-    for (int i = 0; i < 100; ++i)
+    for (int i = 0; i <= 100; ++i)
     {
         if(vetor[i] == 1 && segundoVetor.vetor[i] == 1)
             terceiroVetor.vetor[i] = 1;
@@ -62,7 +62,7 @@ void IntegerSet::printSet()
 {
     int contador = 0;
 
-    for (int i = 0; i < 100; ++i)
+    for (int i = 0; i <= 100; ++i)
     {
         if(vetor[i] == 1)
             cout << i << " ";
@@ -70,7 +70,7 @@ void IntegerSet::printSet()
             contador++;
     }
 
-    if(contador == 100)
+    if(contador == 101)
         cout << "---";
 
     cout<<endl;
@@ -80,7 +80,7 @@ bool IntegerSet::isEqualTo(IntegerSet segundoVetor)
 {
     bool igual = true;
 
-    for (int i = 0; i < 100; ++i)
+    for (int i = 0; i <= 100; ++i)
     {
         if(vetor[i] != segundoVetor.vetor[i])
         {
