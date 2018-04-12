@@ -57,6 +57,8 @@ int main()
         cout << "| 3 - Verificar se os conjuntos sao iguais:                                |" << endl;
         cout << "| 4 - Imprimir primeiro conjunto:                                          |" << endl;
         cout << "| 5 - Imprimir segundo conjunto:                                           |" << endl;
+        cout << "| 6 - Apagar um numero do primeiro conjunto:                               |" << endl;
+        cout << "| 7 - Apagar um numero do segundo conjunto:                                |" << endl;
         cout << "| 0 - Fim do programa:                                                     |" << endl;
         cout << "|--------------------------------------------------------------------------|" << endl;
         cin >> opcao;
@@ -106,6 +108,44 @@ int main()
             case 5:
             {
                 segundoVetor.printSet();
+                break;
+            }
+                
+            case 6:
+            {
+                cout << "|--------------------------------------------------------------------------|" << endl;
+                cout << "|                  Qual dos numeros abaixo deseja apagar?                  |" << endl;
+                cout << "|--------------------------------------------------------------------------|" << endl;
+                primeiroVetor.printSet();
+                
+                int digitado;
+                
+                cin >> digitado;
+                primeiroVetor.deleteElement(digitado);
+                
+                cout << "|--------------------------------------------------------------------------|" << endl;
+                cout << "|                              Numero APAGADO!                             |" << endl;
+                cout << "|--------------------------------------------------------------------------|" << endl;
+                
+                break;
+            }
+                
+            case 7:
+            {
+                cout << "|--------------------------------------------------------------------------|" << endl;
+                cout << "|                  Qual dos numeros abaixo deseja apagar?                  |" << endl;
+                cout << "|--------------------------------------------------------------------------|" << endl;
+                segundoVetor.printSet();
+                
+                int digitado;
+                
+                cin >> digitado;
+                segundoVetor.deleteElement(digitado);
+                
+                cout << "|--------------------------------------------------------------------------|" << endl;
+                cout << "|                              Numero APAGADO!                             |" << endl;
+                cout << "|--------------------------------------------------------------------------|" << endl;
+                
                 break;
             }
 
